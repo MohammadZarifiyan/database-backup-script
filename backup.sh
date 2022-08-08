@@ -10,9 +10,9 @@ FTP_UPLOAD_DIR="/backup"
 
 LOG_FILE=/tmp/backup-$DATE.log
 
-FILE_NAME=$DATE-$1.sql.gz
+FILE_NAME=$DATE-all-databases.sql.gz
 
-mysqldump $1 | gzip > $LOCAL_BACKUP_DIR/$FILE_NAME
+mysqldump -u$i1 -p$2 --all-databases | gzip > $LOCAL_BACKUP_DIR/$FILE_NAME
 
 ftp -invp $FTP_SERVER <<EOF
     user $FTP_USERNAME $FTP_PASSWORT
