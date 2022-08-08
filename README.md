@@ -8,7 +8,7 @@ Notice: it's strongly recommended to use base64 encrypted password in `FTP_PASSW
 
 Then run this command:
 ```bash
-bash backup.sh <Your database name>
+bash backup.sh <Mysql username> <Mysql password>
 ```
 
 You can run this command using CronJob to take backup from database every day or etc.
