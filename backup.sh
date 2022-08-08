@@ -12,7 +12,7 @@ LOG_FILE=/tmp/backup-$DATE.log
 
 FILE_NAME=$DATE-all-databases.sql.gz
 
-mysqldump -u$i1 -p$2 --all-databases | gzip > $LOCAL_BACKUP_DIR/$FILE_NAME
+mysqldump --single-transaction -u$i1 -p$2 --all-databases | gzip > $LOCAL_BACKUP_DIR/$FILE_NAME
 
 ftp -invp $FTP_SERVER <<EOF
     user $FTP_USERNAME $FTP_PASSWORT
