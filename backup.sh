@@ -4,8 +4,8 @@ DATE=`date +%Y-%m-%d_%H%M`
 LOCAL_BACKUP_DIR="/tmp"
 
 FTP_SERVER="<ftp server>"
-FTP_USERNAME="<ftp username>"#Fill here
-FTP_PASSWORT=$(echo <base64 encoded password> | base64 --decode)#Fill here
+FTP_USERNAME="<ftp username>"
+FTP_PASSWORT=$(echo <base64 encoded password> | base64 --decode)
 FTP_UPLOAD_DIR="/backup"
 
 LOG_FILE=/tmp/backup-$DATE.log
