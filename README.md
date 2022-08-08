@@ -1,6 +1,14 @@
 # database-backup-script
 A simple bash script that creates backup from specified database and uploads backup file to a FTP server.
 
+# Requruitments
+Create a readonly Mysql user to use by this script.
+```
+$ mysql
+mysql> GRANT SELECT, SHOW VIEW ON *.* TO readonly@localhost IDENTIFIED BY '<Mysql password>';
+mysql> FLUSH PRIVILEGES;
+```
+
 # How to run ?
 Please fill `FTP_SERVER`, `FTP_USERNAME` and `FTP_PASSWORT` first.
 
